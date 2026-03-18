@@ -1,0 +1,17 @@
+#cloud-config
+users:
+  - name: adminu
+    groups: wheel
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ${admin_public_ssh_key}
+  - name: autou
+    groups: wheel
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ${automation_public_ssh_key}
+package_update: true
+package_upgrade: true
+package_reboot_if_required: true

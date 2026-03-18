@@ -1,0 +1,4 @@
+hcloud_token              = "my_token"
+managed_domain            = "example.com"
+admin_public_ssh_key      = "ssh-ed25519 AAAA..."
+automation_public_ssh_key = "ssh-ed25519 AAAA..."
